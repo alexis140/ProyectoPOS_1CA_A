@@ -17,7 +17,6 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
         CategoriaBLL bll = new CategoriaBLL();
 
         int categoriaID = 0;  // Guarda el ID seleccionado
-        string Modo = "Nuevo"; // Nuevo o Editar
 
         public FrmCategoria()
         {
@@ -137,6 +136,18 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
