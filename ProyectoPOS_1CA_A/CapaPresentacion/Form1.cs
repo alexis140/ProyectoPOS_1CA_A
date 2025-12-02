@@ -61,8 +61,16 @@ namespace ProyectoPOS_1CA_A
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmUsuarios frm = new FrmUsuarios();
+            FrmUsuario frm = new FrmUsuario();
             frm.ShowDialog();
+
+        }
+
+        private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCambiarClave frm = new FrmCambiarClave();
+            frm.ShowDialog();
+
 
         }
     }

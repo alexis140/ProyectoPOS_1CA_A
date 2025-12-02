@@ -48,16 +48,17 @@
             this.cierreDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saliirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.panelCentral = new System.Windows.Forms.Panel();
-            this.logoPOS = new System.Windows.Forms.PictureBox();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCorteCaja = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnVentaRapida = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelCentral = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.logoPOS = new System.Windows.Forms.PictureBox();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             this.panelCentral.SuspendLayout();
@@ -73,7 +74,8 @@
             this.gestiónToolStripMenuItem,
             this.ventasToolStripMenuItem,
             this.reportesToolStripMenuItem,
-            this.saliirToolStripMenuItem});
+            this.saliirToolStripMenuItem,
+            this.cambiarClaveToolStripMenuItem});
             this.menuSuperior.Location = new System.Drawing.Point(0, 0);
             this.menuSuperior.Name = "menuSuperior";
             this.menuSuperior.Size = new System.Drawing.Size(1045, 31);
@@ -211,7 +213,7 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panelIzquierdo.Controls.Add(this.button1);
+            this.panelIzquierdo.Controls.Add(this.btnUsuarios);
             this.panelIzquierdo.Controls.Add(this.btnSalir);
             this.panelIzquierdo.Controls.Add(this.btnCorteCaja);
             this.panelIzquierdo.Controls.Add(this.btnInventario);
@@ -220,32 +222,22 @@
             this.panelIzquierdo.Controls.Add(this.btnVentaRapida);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 31);
-            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(4);
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(267, 659);
             this.panelIzquierdo.TabIndex = 1;
             // 
-            // panelCentral
+            // btnUsuarios
             // 
-            this.panelCentral.Controls.Add(this.label1);
-            this.panelCentral.Controls.Add(this.logoPOS);
-            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCentral.Location = new System.Drawing.Point(267, 31);
-            this.panelCentral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(778, 659);
-            this.panelCentral.TabIndex = 2;
-            // 
-            // logoPOS
-            // 
-            this.logoPOS.Image = global::ProyectoPOS_1CA_A.Properties.Resources.Gemini_Generated_Image_u3u1r0u3u1r0u3u1;
-            this.logoPOS.Location = new System.Drawing.Point(23, 57);
-            this.logoPOS.Margin = new System.Windows.Forms.Padding(4);
-            this.logoPOS.Name = "logoPOS";
-            this.logoPOS.Size = new System.Drawing.Size(740, 471);
-            this.logoPOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPOS.TabIndex = 0;
-            this.logoPOS.TabStop = false;
+            this.btnUsuarios.BackColor = System.Drawing.Color.Bisque;
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Location = new System.Drawing.Point(13, 560);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(240, 67);
+            this.btnUsuarios.TabIndex = 6;
+            this.btnUsuarios.Text = "USUARIO";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSalir
             // 
@@ -345,26 +337,44 @@
             this.btnVentaRapida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentaRapida.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // panelCentral
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(669, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.panelCentral.Controls.Add(this.lblUsuario);
+            this.panelCentral.Controls.Add(this.logoPOS);
+            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentral.Location = new System.Drawing.Point(267, 31);
+            this.panelCentral.Margin = new System.Windows.Forms.Padding(4);
+            this.panelCentral.Name = "panelCentral";
+            this.panelCentral.Size = new System.Drawing.Size(778, 659);
+            this.panelCentral.TabIndex = 2;
             // 
-            // button1
+            // lblUsuario
             // 
-            this.button1.BackColor = System.Drawing.Color.Bisque;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 560);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 67);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "USUARIO";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.CausesValidation = false;
+            this.lblUsuario.Location = new System.Drawing.Point(669, 17);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(44, 16);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "label1";
+            // 
+            // logoPOS
+            // 
+            this.logoPOS.Image = global::ProyectoPOS_1CA_A.Properties.Resources.Gemini_Generated_Image_u3u1r0u3u1r0u3u1;
+            this.logoPOS.Location = new System.Drawing.Point(23, 57);
+            this.logoPOS.Margin = new System.Windows.Forms.Padding(4);
+            this.logoPOS.Name = "logoPOS";
+            this.logoPOS.Size = new System.Drawing.Size(740, 471);
+            this.logoPOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPOS.TabIndex = 0;
+            this.logoPOS.TabStop = false;
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -376,7 +386,7 @@
             this.Controls.Add(this.panelIzquierdo);
             this.Controls.Add(this.menuSuperior);
             this.MainMenuStrip = this.menuSuperior;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -423,8 +433,9 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Panel panelCentral;
         private System.Windows.Forms.PictureBox logoPOS;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
     }
 }
 
