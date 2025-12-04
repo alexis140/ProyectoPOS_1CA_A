@@ -73,5 +73,13 @@ namespace ProyectoPOS_1CA_A
 
 
         }
+
+        private void btnReportePDF_Click(object sender, EventArgs e)
+        {
+            FrmReporteVentas frm = new FrmReporteVentas();
+            frm.ShowDialog();
+        }
+
     }
 }
+

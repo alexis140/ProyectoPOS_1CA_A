@@ -47,6 +47,7 @@
             this.productoMasVendidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saliirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -58,7 +59,7 @@
             this.panelCentral = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.logoPOS = new System.Windows.Forms.PictureBox();
-            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportePDF = new System.Windows.Forms.Button();
             this.menuSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             this.panelCentral.SuspendLayout();
@@ -210,9 +211,17 @@
             this.saliirToolStripMenuItem.Size = new System.Drawing.Size(60, 27);
             this.saliirToolStripMenuItem.Text = "Saliir";
             // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panelIzquierdo.Controls.Add(this.btnReportePDF);
             this.panelIzquierdo.Controls.Add(this.btnUsuarios);
             this.panelIzquierdo.Controls.Add(this.btnSalir);
             this.panelIzquierdo.Controls.Add(this.btnCorteCaja);
@@ -231,7 +240,7 @@
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.Bisque;
             this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(13, 560);
+            this.btnUsuarios.Location = new System.Drawing.Point(13, 480);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(240, 67);
             this.btnUsuarios.TabIndex = 6;
@@ -246,7 +255,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = global::ProyectoPOS_1CA_A.Properties.Resources.twitter_alt_circle_12107562;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(13, 480);
+            this.btnSalir.Location = new System.Drawing.Point(13, 397);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(240, 68);
@@ -262,7 +271,7 @@
             this.btnCorteCaja.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCorteCaja.Image = global::ProyectoPOS_1CA_A.Properties.Resources.file_invoice_dollar_7928219__1_;
             this.btnCorteCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCorteCaja.Location = new System.Drawing.Point(13, 388);
+            this.btnCorteCaja.Location = new System.Drawing.Point(16, 324);
             this.btnCorteCaja.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnCorteCaja.Name = "btnCorteCaja";
             this.btnCorteCaja.Size = new System.Drawing.Size(240, 68);
@@ -278,7 +287,7 @@
             this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.Image = global::ProyectoPOS_1CA_A.Properties.Resources.data_backup_19006204;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInventario.Location = new System.Drawing.Point(13, 295);
+            this.btnInventario.Location = new System.Drawing.Point(16, 245);
             this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(240, 68);
@@ -294,7 +303,7 @@
             this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.Image = global::ProyectoPOS_1CA_A.Properties.Resources.user_3917711;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClientes.Location = new System.Drawing.Point(16, 202);
+            this.btnClientes.Location = new System.Drawing.Point(19, 170);
             this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(240, 68);
@@ -311,7 +320,7 @@
             this.btnProductos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.Image = global::ProyectoPOS_1CA_A.Properties.Resources.store_alt_7653280;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProductos.Location = new System.Drawing.Point(16, 110);
+            this.btnProductos.Location = new System.Drawing.Point(19, 95);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(240, 68);
@@ -352,7 +361,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.CausesValidation = false;
-            this.lblUsuario.Location = new System.Drawing.Point(669, 17);
+            this.lblUsuario.Location = new System.Drawing.Point(494, 17);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(44, 16);
             this.lblUsuario.TabIndex = 1;
@@ -369,12 +378,17 @@
             this.logoPOS.TabIndex = 0;
             this.logoPOS.TabStop = false;
             // 
-            // cambiarClaveToolStripMenuItem
+            // btnReportePDF
             // 
-            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
-            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
-            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            this.btnReportePDF.BackColor = System.Drawing.Color.Bisque;
+            this.btnReportePDF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePDF.Location = new System.Drawing.Point(16, 553);
+            this.btnReportePDF.Name = "btnReportePDF";
+            this.btnReportePDF.Size = new System.Drawing.Size(234, 68);
+            this.btnReportePDF.TabIndex = 7;
+            this.btnReportePDF.Text = "GENERAR REPORTE";
+            this.btnReportePDF.UseVisualStyleBackColor = false;
+            this.btnReportePDF.Click += new System.EventHandler(this.btnReportePDF_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -436,6 +450,7 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.Button btnReportePDF;
     }
 }
 
