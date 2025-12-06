@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -198,7 +199,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Sienna;
+            this.btnNuevo.BackColor = System.Drawing.Color.DarkGray;
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevo.Location = new System.Drawing.Point(618, 254);
             this.btnNuevo.Name = "btnNuevo";
@@ -210,7 +211,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Sienna;
+            this.btnEditar.BackColor = System.Drawing.Color.DarkGray;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditar.Location = new System.Drawing.Point(618, 294);
             this.btnEditar.Name = "btnEditar";
@@ -222,7 +223,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Sienna;
+            this.btnEliminar.BackColor = System.Drawing.Color.DarkGray;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Location = new System.Drawing.Point(618, 334);
             this.btnEliminar.Name = "btnEliminar";
@@ -234,7 +235,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Sienna;
+            this.btnLimpiar.BackColor = System.Drawing.Color.DarkGray;
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiar.Location = new System.Drawing.Point(618, 374);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -246,7 +247,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.Sienna;
+            this.btnVolver.BackColor = System.Drawing.Color.DarkGray;
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnVolver.Location = new System.Drawing.Point(618, 416);
             this.btnVolver.Name = "btnVolver";
@@ -260,7 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(784, 502);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnLimpiar);
@@ -271,6 +272,7 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmProductos";
             this.Text = "Formulario Control de Productos";

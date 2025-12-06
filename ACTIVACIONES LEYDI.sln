@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoPOS_1CA_A", "ProyectoPOS_1CA_A\ProyectoPOS_1CA_A.csproj", "{F9C077A3-44C9-4361-A512-A2BF86685669}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACTIVACIONES LEYDI", "ProyectoPOS_1CA_A\ACTIVACIONES LEYDI.csproj", "{F9C077A3-44C9-4361-A512-A2BF86685669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

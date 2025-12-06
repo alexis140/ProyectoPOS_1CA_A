@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoriaEliminar));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(240, 183);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(224, 22);
             this.txtNombre.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(240, 266);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(224, 22);
             this.txtDescripcion.TabIndex = 1;
@@ -59,7 +60,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(116, 457);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(191, 58);
             this.btnEliminar.TabIndex = 2;
@@ -70,7 +71,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(765, 457);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(191, 58);
             this.btnCancelar.TabIndex = 3;
@@ -115,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -124,7 +125,8 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCategoriaEliminar";
             this.Text = "FrmCategoriaEliminar";
             this.Load += new System.EventHandler(this.FrmCategoriaEliminar_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -102,11 +103,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoPOS_1CA_A.Properties.Resources.icons8_login_64;
+            this.pictureBox1.Image = global::ProyectoPOS_1CA_A.Properties.Resources.login_16321445;
             this.pictureBox1.Location = new System.Drawing.Point(613, 106);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(272, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -114,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Brown;
+            this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(1503, 788);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
@@ -126,6 +127,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";

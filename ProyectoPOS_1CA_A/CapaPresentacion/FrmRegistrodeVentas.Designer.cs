@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrodeVentas));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -80,9 +81,9 @@
             this.groupBox1.Controls.Add(this.lblCliente);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 84);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1333, 101);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -91,7 +92,7 @@
             // dtpFecha
             // 
             this.dtpFecha.Location = new System.Drawing.Point(1019, 33);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(287, 32);
             this.dtpFecha.TabIndex = 6;
@@ -111,7 +112,7 @@
             // 
             this.cboTipoPago.FormattingEnabled = true;
             this.cboTipoPago.Location = new System.Drawing.Point(711, 33);
-            this.cboTipoPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoPago.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoPago.Name = "cboTipoPago";
             this.cboTipoPago.Size = new System.Drawing.Size(201, 33);
             this.cboTipoPago.TabIndex = 4;
@@ -131,7 +132,7 @@
             // 
             this.btnNuevoCliente.BackColor = System.Drawing.Color.YellowGreen;
             this.btnNuevoCliente.Location = new System.Drawing.Point(364, 32);
-            this.btnNuevoCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(145, 44);
             this.btnNuevoCliente.TabIndex = 2;
@@ -142,7 +143,7 @@
             // 
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.Location = new System.Drawing.Point(127, 34);
-            this.cboCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(211, 33);
             this.cboCliente.TabIndex = 1;
@@ -167,9 +168,9 @@
             this.groupBox2.Controls.Add(this.lblBuscar);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(16, 224);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(684, 532);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -180,7 +181,7 @@
             this.dgvProductos.BackgroundColor = System.Drawing.Color.White;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(24, 124);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
@@ -192,7 +193,7 @@
             // 
             this.btnAgregarProducto.BackColor = System.Drawing.Color.Khaki;
             this.btnAgregarProducto.Location = new System.Drawing.Point(404, 384);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(220, 41);
             this.btnAgregarProducto.TabIndex = 3;
@@ -204,7 +205,7 @@
             // 
             this.btnBuscarProducto.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnBuscarProducto.Location = new System.Drawing.Point(476, 43);
-            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(148, 41);
             this.btnBuscarProducto.TabIndex = 2;
@@ -215,7 +216,7 @@
             // txtBuscarProducto
             // 
             this.txtBuscarProducto.Location = new System.Drawing.Point(127, 46);
-            this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(284, 29);
             this.txtBuscarProducto.TabIndex = 1;
@@ -238,9 +239,9 @@
             this.groupBox3.Controls.Add(this.dgvDetalles);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(708, 224);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(641, 532);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -250,7 +251,7 @@
             // 
             this.btnLimpiarDetalle.BackColor = System.Drawing.Color.Coral;
             this.btnLimpiarDetalle.Location = new System.Drawing.Point(431, 427);
-            this.btnLimpiarDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiarDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiarDetalle.Name = "btnLimpiarDetalle";
             this.btnLimpiarDetalle.Size = new System.Drawing.Size(184, 73);
             this.btnLimpiarDetalle.TabIndex = 2;
@@ -262,7 +263,7 @@
             // 
             this.btnQuitar.BackColor = System.Drawing.Color.Salmon;
             this.btnQuitar.Location = new System.Drawing.Point(63, 423);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(184, 76);
             this.btnQuitar.TabIndex = 1;
@@ -276,7 +277,7 @@
             this.dgvDetalles.BackgroundColor = System.Drawing.Color.White;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Location = new System.Drawing.Point(37, 30);
-            this.dgvDetalles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDetalles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.RowHeadersWidth = 51;
@@ -300,7 +301,7 @@
             this.btnRegistrarVenta.BackColor = System.Drawing.Color.Green;
             this.btnRegistrarVenta.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarVenta.Location = new System.Drawing.Point(793, 804);
-            this.btnRegistrarVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarVenta.Name = "btnRegistrarVenta";
             this.btnRegistrarVenta.Size = new System.Drawing.Size(204, 64);
             this.btnRegistrarVenta.TabIndex = 5;
@@ -313,7 +314,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.OrangeRed;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(1064, 804);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(204, 64);
             this.btnCancelar.TabIndex = 6;
@@ -334,7 +335,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistrodeVentas";
             this.Text = "FrmRegistrodeVentas";
             this.Load += new System.EventHandler(this.FrmRegistrodeVentas_Load);

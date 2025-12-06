@@ -113,6 +113,26 @@ namespace ProyectoPOS_1CA_A.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_16321445 {
+            get {
+                object obj = ResourceManager.GetObject("login_16321445", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mobile_Retail_Store_Logo___Electric_Blue_and_Lime_Green {
+            get {
+                object obj = ResourceManager.GetObject("Mobile Retail Store Logo - Electric Blue and Lime Green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap store_alt_7653280 {
             get {
                 object obj = ResourceManager.GetObject("store-alt_7653280", resourceCulture);

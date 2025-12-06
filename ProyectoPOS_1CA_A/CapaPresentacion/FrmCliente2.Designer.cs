@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente2));
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.chkEstado = new System.Windows.Forms.CheckBox();
@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDui = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(588, 371);
+            this.txtCorreo.Location = new System.Drawing.Point(605, 368);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(169, 29);
@@ -203,7 +203,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(77, 45);
+            this.txtBuscar.Location = new System.Drawing.Point(96, 42);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(531, 29);
             this.txtBuscar.TabIndex = 19;
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(934, 588);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDui);
@@ -266,6 +266,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtTelefono);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCliente2";
             this.Text = " ";

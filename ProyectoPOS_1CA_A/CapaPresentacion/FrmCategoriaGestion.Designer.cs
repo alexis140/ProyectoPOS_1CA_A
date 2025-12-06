@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoriaGestion));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(268, 183);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(241, 22);
             this.txtNombre.TabIndex = 0;
@@ -48,7 +49,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(269, 268);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(240, 22);
             this.txtDescripcion.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(101, 439);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(229, 66);
             this.btnGuardar.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(668, 439);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(229, 66);
             this.btnCancelar.TabIndex = 3;
@@ -116,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkKhaki;
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1045, 567);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label2);
@@ -125,7 +126,8 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCategoriaGestion";
             this.Text = "FrmCategoriaGestion";
             this.Load += new System.EventHandler(this.FrmCategoriaGestion_Load);

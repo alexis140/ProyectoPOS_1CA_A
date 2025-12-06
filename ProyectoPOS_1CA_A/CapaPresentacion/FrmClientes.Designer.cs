@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -58,7 +59,7 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(112, 57);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.Size = new System.Drawing.Size(820, 162);
@@ -88,9 +89,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(39, 226);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(961, 524);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -100,7 +101,7 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Coral;
             this.btnVolver.Location = new System.Drawing.Point(749, 335);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 28);
             this.btnVolver.TabIndex = 18;
@@ -112,7 +113,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Coral;
             this.btnLimpiar.Location = new System.Drawing.Point(749, 272);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btnLimpiar.TabIndex = 17;
@@ -124,7 +125,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Coral;
             this.btnEliminar.Location = new System.Drawing.Point(749, 206);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 16;
@@ -136,7 +137,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Coral;
             this.btnModificar.Location = new System.Drawing.Point(749, 137);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(100, 28);
             this.btnModificar.TabIndex = 15;
@@ -148,7 +149,7 @@
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.Color.Coral;
             this.btnAgregarCliente.Location = new System.Drawing.Point(749, 73);
-            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(100, 28);
             this.btnAgregarCliente.TabIndex = 14;
@@ -159,7 +160,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(491, 63);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(132, 22);
             this.txtId.TabIndex = 13;
@@ -167,7 +168,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(159, 372);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(132, 22);
             this.txtTelefono.TabIndex = 12;
@@ -175,7 +176,7 @@
             // txtCorreoElectronico
             // 
             this.txtCorreoElectronico.Location = new System.Drawing.Point(219, 302);
-            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(132, 22);
             this.txtCorreoElectronico.TabIndex = 11;
@@ -183,7 +184,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(217, 229);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaNacimiento.TabIndex = 10;
@@ -192,7 +193,7 @@
             // 
             this.chkEstado.AutoSize = true;
             this.chkEstado.Location = new System.Drawing.Point(541, 142);
-            this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkEstado.Margin = new System.Windows.Forms.Padding(4);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(116, 20);
             this.chkEstado.TabIndex = 9;
@@ -202,7 +203,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(159, 130);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(132, 22);
             this.txtApellido.TabIndex = 8;
@@ -210,7 +211,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(159, 59);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 7;
@@ -289,11 +290,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Moccasin;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1045, 754);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvClientes);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.Clientes_Load);

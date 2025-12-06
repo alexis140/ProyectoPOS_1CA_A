@@ -124,6 +124,12 @@
   <data name="terms-check_17818045" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\terms-check_17818045.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-login-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-login-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mobile Retail Store Logo - Electric Blue and Lime Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mobile Retail Store Logo - Electric Blue and Lime Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_3917711" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_3917711.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +148,7 @@
   <data name="store-alt_7653280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\store-alt_7653280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-login-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-login-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_16321445" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_16321445.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

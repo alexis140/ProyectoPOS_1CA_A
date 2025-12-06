@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoria));
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -132,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(914, 562);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,6 +144,7 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvCategoria);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCategoria";
             this.Text = "FrmCategoria";
