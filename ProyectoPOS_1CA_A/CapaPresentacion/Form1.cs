@@ -1,4 +1,5 @@
-﻿using ProyectoPOS_1CA_A.CapaEntidades;
+﻿using ProyectoPOS.CapaPresentacion;
+using ProyectoPOS_1CA_A.CapaEntidades;
 using ProyectoPOS_1CA_A.CapaPresentacion;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,9 @@ namespace ProyectoPOS_1CA_A
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Clientes formClientes = new Clientes();
-            formClientes.Show();
+            FrmCliente2 frm = new FrmCliente2();
+            frm.ShowDialog();
+
         }
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
@@ -47,10 +49,12 @@ namespace ProyectoPOS_1CA_A
                 case "Cajero":
                     btnClientes.Enabled = false;
                     btnUsuarios.Enabled = false;
+                    btnProductos.Enabled = false;
                     break;
                 default:
                     btnClientes.Enabled = false;
                     btnUsuarios.Enabled = false;
+                    btnProductos.Enabled = false;
                     break;
 
             }
@@ -80,6 +84,24 @@ namespace ProyectoPOS_1CA_A
             frm.ShowDialog();
         }
 
+
+        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+        }
+
+        private void btnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarVenta frm = new FrmRegistrarVenta();
+            frm.ShowDialog();
+        }
     }
 }
 

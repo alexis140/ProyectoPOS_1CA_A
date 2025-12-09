@@ -43,48 +43,50 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(350, 9);
+            this.label1.BackColor = System.Drawing.Color.AliceBlue;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(308, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 28);
+            this.label1.Size = new System.Drawing.Size(181, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "INICIO SESION";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 146);
+            this.label2.Location = new System.Drawing.Point(52, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 28);
+            this.label2.Size = new System.Drawing.Size(85, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "USUARIO:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 193);
+            this.label3.Location = new System.Drawing.Point(31, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 28);
+            this.label3.Size = new System.Drawing.Size(121, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "CONTRASEÑA:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(156, 146);
+            this.txtUsuario.Location = new System.Drawing.Point(198, 102);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(218, 34);
+            this.txtUsuario.Size = new System.Drawing.Size(271, 29);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(182, 190);
+            this.txtClave.Location = new System.Drawing.Point(198, 181);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(229, 34);
+            this.txtClave.Size = new System.Drawing.Size(271, 29);
             this.txtClave.TabIndex = 4;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(93, 312);
+            this.btnIngresar.Location = new System.Drawing.Point(79, 248);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(209, 46);
             this.btnIngresar.TabIndex = 5;
@@ -94,29 +96,30 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(341, 312);
+            this.btnSalir.Location = new System.Drawing.Point(327, 248);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(209, 46);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoPOS_1CA_A.Properties.Resources.login_16321445;
-            this.pictureBox1.Location = new System.Drawing.Point(613, 106);
+            this.pictureBox1.Location = new System.Drawing.Point(495, 86);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 185);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Turquoise;
-            this.ClientSize = new System.Drawing.Size(1503, 788);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(738, 314);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
@@ -131,6 +134,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -56,6 +56,10 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
             return Seguridad.Hash_SHA256(pass);
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

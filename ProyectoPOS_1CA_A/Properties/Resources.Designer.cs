@@ -63,6 +63,16 @@ namespace ProyectoPOS_1CA_A.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clients_communication_discussion_media_social_users_icon_123773 {
+            get {
+                object obj = ResourceManager.GetObject("clients_communication_discussion_media_social_users_icon_123773", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap data_backup_19006204 {
             get {
                 object obj = ResourceManager.GetObject("data-backup_19006204", resourceCulture);
@@ -156,6 +166,16 @@ namespace ProyectoPOS_1CA_A.Properties {
         internal static System.Drawing.Bitmap twitter_alt_circle_12107562 {
             get {
                 object obj = ResourceManager.GetObject("twitter-alt-circle_12107562", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user__1_ {
+            get {
+                object obj = ResourceManager.GetObject("user (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

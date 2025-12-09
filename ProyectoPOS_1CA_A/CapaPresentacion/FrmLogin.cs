@@ -48,5 +48,10 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
             }
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -42,71 +42,79 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(520, 9);
+            this.label1.BackColor = System.Drawing.Color.AliceBlue;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(295, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 28);
+            this.label1.Size = new System.Drawing.Size(282, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "REPORTE DE VENTAS";
             // 
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
-            this.lblInicio.Location = new System.Drawing.Point(131, 74);
+            this.lblInicio.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblInicio.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(69, 85);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(152, 28);
+            this.lblInicio.Size = new System.Drawing.Size(196, 30);
             this.lblInicio.TabIndex = 1;
-            this.lblInicio.Text = "FECHA INICIO: ";
+            this.lblInicio.Text = "FECHA DE INICIO: ";
             // 
             // lblFin
             // 
             this.lblFin.AutoSize = true;
-            this.lblFin.Location = new System.Drawing.Point(642, 85);
+            this.lblFin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblFin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFin.Location = new System.Drawing.Point(528, 85);
             this.lblFin.Name = "lblFin";
-            this.lblFin.Size = new System.Drawing.Size(117, 28);
+            this.lblFin.Size = new System.Drawing.Size(272, 30);
             this.lblFin.TabIndex = 2;
-            this.lblFin.Text = "FECHA FIN:";
+            this.lblFin.Text = "FECHA DE FINALIZACIÓN:";
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(136, 215);
+            this.btnGenerar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnGenerar.Location = new System.Drawing.Point(131, 213);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(157, 40);
+            this.btnGenerar.Size = new System.Drawing.Size(267, 40);
             this.btnGenerar.TabIndex = 3;
             this.btnGenerar.Text = "GENERAR PDF";
-            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(686, 215);
+            this.btnCerrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCerrar.Location = new System.Drawing.Point(491, 213);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(123, 40);
+            this.btnCerrar.Size = new System.Drawing.Size(267, 40);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(106, 156);
+            this.dtpInicio.Location = new System.Drawing.Point(73, 141);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(200, 34);
+            this.dtpInicio.Size = new System.Drawing.Size(300, 29);
             this.dtpInicio.TabIndex = 5;
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(618, 141);
+            this.dtpFin.Location = new System.Drawing.Point(513, 141);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(200, 34);
+            this.dtpFin.Size = new System.Drawing.Size(299, 29);
             this.dtpFin.TabIndex = 6;
             // 
             // FrmReporteVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1924, 565);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(879, 309);
             this.Controls.Add(this.dtpFin);
             this.Controls.Add(this.dtpInicio);
             this.Controls.Add(this.btnCerrar);
@@ -119,7 +127,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmReporteVentas";
-            this.Text = "FrmReporteVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Reporte de Ventas";
             this.Load += new System.EventHandler(this.FrmReporteVentas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

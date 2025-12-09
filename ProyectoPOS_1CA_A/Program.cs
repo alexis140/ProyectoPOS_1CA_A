@@ -1,4 +1,5 @@
-﻿using ProyectoPOS_1CA_A.CapaPresentacion;
+﻿using ProyectoPOS.CapaPresentacion;
+using ProyectoPOS_1CA_A.CapaPresentacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,8 @@ namespace ProyectoPOS_1CA_A
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmReporteVentas());
+            Application.Run(new FrmLogin());
+           //Application.Run(new FrmRegistrarVenta());
         }
     }
 }

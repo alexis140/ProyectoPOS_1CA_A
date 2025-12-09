@@ -23,16 +23,16 @@ namespace ProyectoPOS_1CA_A.CapaDatos
                     // 1) INSERTAMOS VENTA Y RECUPERAMOS ID DE LA VENTA INGRESADA
 
                     string sqlVenta = @"
-                        INSERT INTO Venta (Fecha, MontoTotal, Id_TipoPago, Id_Cliente)
-                        VALUES (@Fecha, @MontoTotal, @Id_TipoPago, @Id_Cliente);
+                        INSERT INTO Venta (Fecha, MontoTotal, IdTipoPago, IdCliente)
+                        VALUES (@Fecha, @MontoTotal, @IdTipoPago, @IdCliente);
                         SELECT SCOPE_IDENTITY();";
 
                     using (SqlCommand cmd = new SqlCommand(sqlVenta, con, tx))
                     {
                         cmd.Parameters.AddWithValue("@Fecha", venta.Fecha);
                         cmd.Parameters.AddWithValue("@MontoTotal", venta.MontoTotal);
-                        cmd.Parameters.AddWithValue("@Id_TipoPago", venta.Id_TipoPago);
-                        cmd.Parameters.AddWithValue("@Id_Cliente", venta.Id_Cliente);
+                        cmd.Parameters.AddWithValue("@IdTipoPago", venta.Id_TipoPago);
+                        cmd.Parameters.AddWithValue("@IdCliente", venta.Id_Cliente);
 
                         // Recuperamos ID generado
                         venta.Id = Convert.ToInt32(cmd.ExecuteScalar());
@@ -41,8 +41,8 @@ namespace ProyectoPOS_1CA_A.CapaDatos
                     // 2) INSERTAMOS LOS DETALLES
 
                     string sqlDetalle = @"
-                        INSERT INTO DetalleVenta (Cantidad, PrecioUnitario, SubTotal, Id_Venta, Id_Producto)
-                        VALUES (@Cantidad, @PrecioUnitario, @SubTotal, @Id_Venta, @Id_Producto);";
+                        INSERT INTO DetalleVenta (Cantidad, PrecioUnitario, SubTotal, IdVenta, IdProducto)
+                        VALUES (@Cantidad, @PrecioUnitario, @SubTotal, @IdVenta, @IdProducto);";
 
                     // Acumular cantidades por producto (para descontar stock una sola vez)
                     var acumulador = new Dictionary<int, int>();
@@ -55,8 +55,8 @@ namespace ProyectoPOS_1CA_A.CapaDatos
                             cmdDet.Parameters.AddWithValue("@Cantidad", d.Cantidad);
                             cmdDet.Parameters.AddWithValue("@PrecioUnitario", d.PrecioUnitario);
                             cmdDet.Parameters.AddWithValue("@SubTotal", d.SubTotal);
-                            cmdDet.Parameters.AddWithValue("@Id_Venta", venta.Id);
-                            cmdDet.Parameters.AddWithValue("@Id_Producto", d.Id_Producto);
+                            cmdDet.Parameters.AddWithValue("@IdVenta", venta.Id);
+                            cmdDet.Parameters.AddWithValue("@IdProducto", d.Id_Producto);
 
                             cmdDet.ExecuteNonQuery();
                         }

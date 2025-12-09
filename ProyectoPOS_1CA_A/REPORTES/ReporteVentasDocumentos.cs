@@ -46,7 +46,7 @@ namespace ProyectoPOS_1CA_A.REPORTES
                 // -----------------------
                 page.Header().Column(col =>
                 {
-                    col.Item().Text("CAFÉ DULCE AROMA")
+                    col.Item().Text("Activaciones Leydi")
                         .Bold().FontSize(20);
 
                     col.Item().Text("Reporte de Ventas por Período")
@@ -69,7 +69,7 @@ namespace ProyectoPOS_1CA_A.REPORTES
                 {
                     txt.Span("Generado el ").SemiBold();
                     txt.Span(DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
-                    txt.Line(" — Sistema POS Café Dulce Aroma");
+                    txt.Line(" — Sistema POS Activaciones Leydi");
                 });
             });
         }

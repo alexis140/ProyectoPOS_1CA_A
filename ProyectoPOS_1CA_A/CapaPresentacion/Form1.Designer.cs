@@ -30,37 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.menuSuperior = new System.Windows.Forms.MenuStrip();
-            this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productoMasVendidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cierreDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saliirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.btnReportePDF = new System.Windows.Forms.Button();
+            this.btnRegistrarVenta = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.panelCentral = new System.Windows.Forms.Panel();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.logoPOS = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnCorteCaja = new System.Windows.Forms.Button();
-            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnReportePDF = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
-            this.btnVentaRapida = new System.Windows.Forms.Button();
+            this.panelCentral = new System.Windows.Forms.Panel();
+            this.logoPOS = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             this.panelCentral.SuspendLayout();
@@ -73,336 +54,168 @@
             this.menuSuperior.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuSuperior.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuSuperior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestiónToolStripMenuItem,
-            this.ventasToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.saliirToolStripMenuItem,
-            this.cambiarClaveToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.cambiarClaveToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
             this.menuSuperior.Location = new System.Drawing.Point(0, 0);
             this.menuSuperior.Name = "menuSuperior";
-            this.menuSuperior.Size = new System.Drawing.Size(1045, 31);
+            this.menuSuperior.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuSuperior.Size = new System.Drawing.Size(784, 27);
             this.menuSuperior.TabIndex = 0;
             this.menuSuperior.Text = "menuStrip1";
             // 
-            // gestiónToolStripMenuItem
+            // salirToolStripMenuItem
             // 
-            this.gestiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productosToolStripMenuItem,
-            this.categoríasToolStripMenuItem,
-            this.clientesToolStripMenuItem});
-            this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(82, 27);
-            this.gestiónToolStripMenuItem.Text = "Gestión";
-            // 
-            // productosToolStripMenuItem
-            // 
-            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarProductoToolStripMenuItem,
-            this.verProductosToolStripMenuItem});
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
-            this.productosToolStripMenuItem.Text = "Productos";
-            // 
-            // agregarProductoToolStripMenuItem
-            // 
-            this.agregarProductoToolStripMenuItem.Name = "agregarProductoToolStripMenuItem";
-            this.agregarProductoToolStripMenuItem.Size = new System.Drawing.Size(230, 28);
-            this.agregarProductoToolStripMenuItem.Text = "Agregar Producto";
-            // 
-            // verProductosToolStripMenuItem
-            // 
-            this.verProductosToolStripMenuItem.Name = "verProductosToolStripMenuItem";
-            this.verProductosToolStripMenuItem.Size = new System.Drawing.Size(230, 28);
-            this.verProductosToolStripMenuItem.Text = "Ver Productos";
-            // 
-            // categoríasToolStripMenuItem
-            // 
-            this.categoríasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarCategoríaToolStripMenuItem,
-            this.verCategoríasToolStripMenuItem});
-            this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
-            this.categoríasToolStripMenuItem.Text = "Categorías";
-            // 
-            // agregarCategoríaToolStripMenuItem
-            // 
-            this.agregarCategoríaToolStripMenuItem.Name = "agregarCategoríaToolStripMenuItem";
-            this.agregarCategoríaToolStripMenuItem.Size = new System.Drawing.Size(234, 28);
-            this.agregarCategoríaToolStripMenuItem.Text = "Agregar Categoría";
-            // 
-            // verCategoríasToolStripMenuItem
-            // 
-            this.verCategoríasToolStripMenuItem.Name = "verCategoríasToolStripMenuItem";
-            this.verCategoríasToolStripMenuItem.Size = new System.Drawing.Size(234, 28);
-            this.verCategoríasToolStripMenuItem.Text = "Ver Categorías";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarClienteToolStripMenuItem,
-            this.verClientesToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // agregarClienteToolStripMenuItem
-            // 
-            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
-            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
-            // 
-            // verClientesToolStripMenuItem
-            // 
-            this.verClientesToolStripMenuItem.Name = "verClientesToolStripMenuItem";
-            this.verClientesToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
-            this.verClientesToolStripMenuItem.Text = "Ver Clientes";
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarVentaToolStripMenuItem,
-            this.historialDeVentasToolStripMenuItem});
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(75, 27);
-            this.ventasToolStripMenuItem.Text = "Ventas";
-            // 
-            // registrarVentaToolStripMenuItem
-            // 
-            this.registrarVentaToolStripMenuItem.Name = "registrarVentaToolStripMenuItem";
-            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(236, 28);
-            this.registrarVentaToolStripMenuItem.Text = "Registrar Venta";
-            // 
-            // historialDeVentasToolStripMenuItem
-            // 
-            this.historialDeVentasToolStripMenuItem.Name = "historialDeVentasToolStripMenuItem";
-            this.historialDeVentasToolStripMenuItem.Size = new System.Drawing.Size(236, 28);
-            this.historialDeVentasToolStripMenuItem.Text = "Historial de Ventas";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporteDiarioToolStripMenuItem,
-            this.productoMasVendidoToolStripMenuItem,
-            this.cierreDeCajaToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(91, 27);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // reporteDiarioToolStripMenuItem
-            // 
-            this.reporteDiarioToolStripMenuItem.Name = "reporteDiarioToolStripMenuItem";
-            this.reporteDiarioToolStripMenuItem.Size = new System.Drawing.Size(266, 28);
-            this.reporteDiarioToolStripMenuItem.Text = "Reporte Diario";
-            // 
-            // productoMasVendidoToolStripMenuItem
-            // 
-            this.productoMasVendidoToolStripMenuItem.Name = "productoMasVendidoToolStripMenuItem";
-            this.productoMasVendidoToolStripMenuItem.Size = new System.Drawing.Size(266, 28);
-            this.productoMasVendidoToolStripMenuItem.Text = "Producto mas vendido";
-            // 
-            // cierreDeCajaToolStripMenuItem
-            // 
-            this.cierreDeCajaToolStripMenuItem.Name = "cierreDeCajaToolStripMenuItem";
-            this.cierreDeCajaToolStripMenuItem.Size = new System.Drawing.Size(266, 28);
-            this.cierreDeCajaToolStripMenuItem.Text = "Cierre de Caja";
-            // 
-            // saliirToolStripMenuItem
-            // 
-            this.saliirToolStripMenuItem.Name = "saliirToolStripMenuItem";
-            this.saliirToolStripMenuItem.Size = new System.Drawing.Size(60, 27);
-            this.saliirToolStripMenuItem.Text = "Saliir";
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(46, 23);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
             // 
             // cambiarClaveToolStripMenuItem
             // 
             this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(102, 23);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panelIzquierdo.Controls.Add(this.btnReportePDF);
+            this.panelIzquierdo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelIzquierdo.Controls.Add(this.btnRegistrarVenta);
             this.panelIzquierdo.Controls.Add(this.btnUsuarios);
-            this.panelIzquierdo.Controls.Add(this.btnSalir);
-            this.panelIzquierdo.Controls.Add(this.btnCorteCaja);
-            this.panelIzquierdo.Controls.Add(this.btnInventario);
+            this.panelIzquierdo.Controls.Add(this.btnReportePDF);
             this.panelIzquierdo.Controls.Add(this.btnClientes);
             this.panelIzquierdo.Controls.Add(this.btnProductos);
-            this.panelIzquierdo.Controls.Add(this.btnVentaRapida);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelIzquierdo.Location = new System.Drawing.Point(0, 31);
-            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(4);
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 27);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(267, 659);
+            this.panelIzquierdo.Size = new System.Drawing.Size(426, 534);
             this.panelIzquierdo.TabIndex = 1;
             // 
-            // btnReportePDF
+            // btnRegistrarVenta
             // 
-            this.btnReportePDF.BackColor = System.Drawing.Color.White;
-            this.btnReportePDF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportePDF.Location = new System.Drawing.Point(13, 544);
-            this.btnReportePDF.Name = "btnReportePDF";
-            this.btnReportePDF.Size = new System.Drawing.Size(239, 68);
-            this.btnReportePDF.TabIndex = 7;
-            this.btnReportePDF.Text = "GENERAR REPORTE";
-            this.btnReportePDF.UseVisualStyleBackColor = false;
-            this.btnReportePDF.Click += new System.EventHandler(this.btnReportePDF_Click);
+            this.btnRegistrarVenta.BackColor = System.Drawing.Color.White;
+            this.btnRegistrarVenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarVenta.Image = global::ProyectoPOS_1CA_A.Properties.Resources.store_alt_7653280;
+            this.btnRegistrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(11, 31);
+            this.btnRegistrarVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
+            this.btnRegistrarVenta.Size = new System.Drawing.Size(394, 44);
+            this.btnRegistrarVenta.TabIndex = 8;
+            this.btnRegistrarVenta.Text = "Registrar Ventas";
+            this.btnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
             // btnUsuarios
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.White;
             this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 471);
+            this.btnUsuarios.Image = global::ProyectoPOS_1CA_A.Properties.Resources.user_3917711;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsuarios.Location = new System.Drawing.Point(11, 256);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(240, 67);
+            this.btnUsuarios.Size = new System.Drawing.Size(394, 44);
             this.btnUsuarios.TabIndex = 6;
-            this.btnUsuarios.Text = "USUARIO";
+            this.btnUsuarios.Text = "Gestion de Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panelCentral
+            // btnReportePDF
             // 
-            this.panelCentral.Controls.Add(this.lblUsuario);
-            this.panelCentral.Controls.Add(this.logoPOS);
-            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCentral.Location = new System.Drawing.Point(267, 31);
-            this.panelCentral.Margin = new System.Windows.Forms.Padding(4);
-            this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(778, 659);
-            this.panelCentral.TabIndex = 2;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.CausesValidation = false;
-            this.lblUsuario.Location = new System.Drawing.Point(494, 17);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(44, 16);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "label1";
-            // 
-            // logoPOS
-            // 
-            this.logoPOS.Image = global::ProyectoPOS_1CA_A.Properties.Resources.Mobile_Retail_Store_Logo___Electric_Blue_and_Lime_Green;
-            this.logoPOS.Location = new System.Drawing.Point(23, 57);
-            this.logoPOS.Margin = new System.Windows.Forms.Padding(4);
-            this.logoPOS.Name = "logoPOS";
-            this.logoPOS.Size = new System.Drawing.Size(740, 471);
-            this.logoPOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPOS.TabIndex = 0;
-            this.logoPOS.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Image = global::ProyectoPOS_1CA_A.Properties.Resources.twitter_alt_circle_12107562;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(13, 397);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(240, 68);
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            // 
-            // btnCorteCaja
-            // 
-            this.btnCorteCaja.BackColor = System.Drawing.Color.White;
-            this.btnCorteCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCorteCaja.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCorteCaja.Image = global::ProyectoPOS_1CA_A.Properties.Resources.file_invoice_dollar_7928219__1_;
-            this.btnCorteCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCorteCaja.Location = new System.Drawing.Point(16, 324);
-            this.btnCorteCaja.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
-            this.btnCorteCaja.Name = "btnCorteCaja";
-            this.btnCorteCaja.Size = new System.Drawing.Size(240, 68);
-            this.btnCorteCaja.TabIndex = 4;
-            this.btnCorteCaja.Text = "Corte de Caja";
-            this.btnCorteCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCorteCaja.UseVisualStyleBackColor = false;
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.BackColor = System.Drawing.Color.White;
-            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.Image = global::ProyectoPOS_1CA_A.Properties.Resources.data_backup_19006204;
-            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInventario.Location = new System.Drawing.Point(16, 245);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(240, 68);
-            this.btnInventario.TabIndex = 3;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnReportePDF.BackColor = System.Drawing.Color.White;
+            this.btnReportePDF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePDF.Image = global::ProyectoPOS_1CA_A.Properties.Resources.terms_check_17818045;
+            this.btnReportePDF.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReportePDF.Location = new System.Drawing.Point(11, 181);
+            this.btnReportePDF.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReportePDF.Name = "btnReportePDF";
+            this.btnReportePDF.Size = new System.Drawing.Size(394, 45);
+            this.btnReportePDF.TabIndex = 7;
+            this.btnReportePDF.Text = "Generar Reporte";
+            this.btnReportePDF.UseVisualStyleBackColor = false;
+            this.btnReportePDF.Click += new System.EventHandler(this.btnReportePDF_Click);
             // 
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.Color.White;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.Image = global::ProyectoPOS_1CA_A.Properties.Resources.user_3917711;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Image = global::ProyectoPOS_1CA_A.Properties.Resources.clients_communication_discussion_media_social_users_icon_123773;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClientes.Location = new System.Drawing.Point(19, 170);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
+            this.btnClientes.Location = new System.Drawing.Point(11, 104);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(240, 68);
+            this.btnClientes.Size = new System.Drawing.Size(394, 45);
             this.btnClientes.TabIndex = 2;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.Text = "Gestion de Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnProductos
             // 
             this.btnProductos.BackColor = System.Drawing.Color.White;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Image = global::ProyectoPOS_1CA_A.Properties.Resources.store_alt_7653280;
+            this.btnProductos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Image = global::ProyectoPOS_1CA_A.Properties.Resources.data_backup_19006204;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProductos.Location = new System.Drawing.Point(19, 95);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
+            this.btnProductos.Location = new System.Drawing.Point(12, 329);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(240, 68);
+            this.btnProductos.Size = new System.Drawing.Size(395, 45);
             this.btnProductos.TabIndex = 1;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProductos.Text = "Gestion de Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // btnVentaRapida
+            // panelCentral
             // 
-            this.btnVentaRapida.BackColor = System.Drawing.Color.White;
-            this.btnVentaRapida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentaRapida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentaRapida.Image = global::ProyectoPOS_1CA_A.Properties.Resources.terms_check_17818045;
-            this.btnVentaRapida.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVentaRapida.Location = new System.Drawing.Point(16, 17);
-            this.btnVentaRapida.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
-            this.btnVentaRapida.Name = "btnVentaRapida";
-            this.btnVentaRapida.Size = new System.Drawing.Size(240, 68);
-            this.btnVentaRapida.TabIndex = 0;
-            this.btnVentaRapida.Text = "Venta Rápida";
-            this.btnVentaRapida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVentaRapida.UseVisualStyleBackColor = false;
+            this.panelCentral.Controls.Add(this.logoPOS);
+            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentral.Location = new System.Drawing.Point(426, 27);
+            this.panelCentral.Name = "panelCentral";
+            this.panelCentral.Size = new System.Drawing.Size(358, 534);
+            this.panelCentral.TabIndex = 2;
+            // 
+            // logoPOS
+            // 
+            this.logoPOS.Image = global::ProyectoPOS_1CA_A.Properties.Resources.Mobile_Retail_Store_Logo___Electric_Blue_and_Lime_Green;
+            this.logoPOS.Location = new System.Drawing.Point(3, -16);
+            this.logoPOS.Name = "logoPOS";
+            this.logoPOS.Size = new System.Drawing.Size(355, 575);
+            this.logoPOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPOS.TabIndex = 0;
+            this.logoPOS.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.CausesValidation = false;
+            this.lblUsuario.Location = new System.Drawing.Point(589, 9);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "label1";
             // 
             // FrmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1045, 690);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panelCentral);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.panelIzquierdo);
             this.Controls.Add(this.menuSuperior);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuSuperior;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -412,7 +225,6 @@
             this.menuSuperior.PerformLayout();
             this.panelIzquierdo.ResumeLayout(false);
             this.panelCentral.ResumeLayout(false);
-            this.panelCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -422,29 +234,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuSuperior;
-        private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarProductoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem categoríasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarCategoríaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verCategoríasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarVentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem historialDeVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDiarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productoMasVendidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cierreDeCajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saliirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Panel panelIzquierdo;
-        private System.Windows.Forms.Button btnVentaRapida;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnCorteCaja;
-        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Panel panelCentral;
@@ -453,6 +244,8 @@
         private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
         private System.Windows.Forms.Button btnReportePDF;
         private System.Windows.Forms.PictureBox logoPOS;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.Button btnRegistrarVenta;
     }
 }
 

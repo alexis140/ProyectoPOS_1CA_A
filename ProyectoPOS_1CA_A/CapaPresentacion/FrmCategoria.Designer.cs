@@ -37,6 +37,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
             this.dgvCategoria.RowHeadersWidth = 51;
-            this.dgvCategoria.Size = new System.Drawing.Size(787, 278);
+            this.dgvCategoria.Size = new System.Drawing.Size(588, 364);
             this.dgvCategoria.TabIndex = 0;
             this.dgvCategoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellClick);
             this.dgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellContentClick);
@@ -59,25 +60,26 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(176, 66);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(465, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(465, 23);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(53, 461);
+            this.btnNuevo.Location = new System.Drawing.Point(730, 117);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(134, 43);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "AGREGAR";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(291, 461);
+            this.btnEditar.Location = new System.Drawing.Point(730, 240);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(134, 44);
             this.btnEditar.TabIndex = 3;
@@ -87,19 +89,20 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(524, 462);
+            this.btnEliminar.Location = new System.Drawing.Point(730, 176);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(134, 43);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(730, 463);
+            this.btnCerrar.Location = new System.Drawing.Point(730, 305);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(134, 42);
             this.btnCerrar.TabIndex = 5;
@@ -111,29 +114,37 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(91, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "FILTRAR:";
+            this.label1.Text = "FILTRO:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(298, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(355, 37);
+            this.label2.Size = new System.Drawing.Size(279, 30);
             this.label2.TabIndex = 7;
             this.label2.Text = "CONTROL DE CATEGORÍAS";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Location = new System.Drawing.Point(1, 353);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(926, 227);
+            this.panel1.TabIndex = 8;
+            // 
             // FrmCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Cyan;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(914, 562);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,6 +154,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvCategoria);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -165,5 +177,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

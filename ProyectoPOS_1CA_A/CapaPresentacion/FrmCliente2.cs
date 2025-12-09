@@ -139,6 +139,26 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
         {
             dgvClientes.DataSource = bll.Buscar(txtBuscar.Text);
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

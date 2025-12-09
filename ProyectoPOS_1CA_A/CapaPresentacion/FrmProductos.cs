@@ -1,8 +1,10 @@
-﻿using ProyectoPOS_1CA_A.CapaEntidades;
+﻿using ProyectoPOS_1CA_A.CapaDatos;
+using ProyectoPOS_1CA_A.CapaEntidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,13 +15,13 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
 {
     public partial class FrmProductos : Form
     {
+        private readonly ProductoDAL bll = new ProductoDAL();
+        private List<Producto> listaProductos = new List<Producto>();
         public FrmProductos()
         {
             InitializeComponent();
         }
         //Creacion de una lista estatica que simulara la DB
-        public static List<Producto> listaProductos = new List<Producto>();
-
         private void DesabilitarBotones()
         {
             btnLimpiar.Enabled = false;
@@ -43,96 +45,106 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-            //Cargar los datos iniciales
-            if (!listaProductos.Any())
-            {// cada vez que se cargue el formulario, si la lista esta vacia,
-             // se agregan los productos iniciales
-                listaProductos.Add(new Producto
-                {
-                    Id = 1,
-                    Nombre = "Café Gourmet",
-                    Descripcion = "Importado",
-                    Precio = 10.5m,
-                    Stock = 100,
-                    Estado = true
-                });
-                listaProductos.Add(new Producto
-                {
-                    Id = 2,
-                    Nombre = "Café Borbon",
-                    Descripcion = "De altura",
-                    Precio = 20.0m,
-                    Stock = 50,
-                    Estado = true
-                });
-                listaProductos.Add(new Producto
-                {
-                    Id = 3,
-                    Nombre = "Cheescake",
-                    Descripcion = "Dulce sabor",
-                    Precio = 15.75m,
-                    Stock = 75,
-                    Estado = true
-                });
-            }
-            RefrescarGrid();//mando a llamar el metodo para refrescar el datagridview
+            CargarProductos(string.Empty);
             DesabilitarBotones();
+        }
+            private void CargarProductos(string filtro)
+        {
+            // Obtenemos la lista desde DAL
+            var tabla = ProductoDAL.Listar(); // ya lo creamos en Paso 2
+
+            // Actualizar listaProductos con los datos actuales
+            listaProductos = tabla.AsEnumerable()
+                .Select(row => new Producto
+                {
+                    Id = row.Field<int>("Id"),
+                    Nombre = row.Field<string>("Nombre"),
+                    Precio = row.Field<decimal>("Precio"),
+                    Stock = row.Field<int>("Stock"),
+                    Estado = row.Field<bool>("Estado"),
+                    Id_Categoria = row.Table.Columns.Contains("Id_Categoria") ? row.Field<int>("Id_Categoria") : 1
+                })
+                .ToList();
+
+            // Filtrar si hay texto
+            if (!string.IsNullOrWhiteSpace(filtro))
+            {
+                var dv = tabla.DefaultView;
+                dv.RowFilter = $"Nombre LIKE '%{filtro}%'";
+                dgvProductos.DataSource = dv;
+            }
+            else
+            {
+                dgvProductos.DataSource = tabla;
+            }
+
+            dgvProductos.Columns["Id"].Visible = false;
         }
 
         //asignar la lista como DataSOurce al datagridview
         private void RefrescarGrid()
         {
-            dgvProductos.DataSource = null; // Limpiar el DataSource antes de reasignarlo
-            dgvProductos.DataSource = listaProductos; // Asignar la lista como DataSource
+            CargarProductos(string.Empty);
         }
         //BOTON GUARDAR
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //Validaciones basicas
-            //valida que el nombre no este vacio
-            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+
+            try
             {
-                MessageBox.Show("El nombre del producto es obligatorio.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtNombre.Focus();
-                return;
-            }//valida que el precio ingresado sea un decimal
-            if (!Validaciones.EsDecimal(txtPrecio.Text))
-            {
-                MessageBox.Show("El precio del producto debe ser un valor numérico.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPrecio.Focus();
-                return;
-            }//valida que el stock ingresado sea un entero
-            if (!Validaciones.EsEntero(txtStock.Text))
-            {
-                MessageBox.Show("el stock del producto debe ser un valor entero.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtStock.Focus();
-                return;
+                // Validaciones
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
+                {
+                    MessageBox.Show("Debe ingresar un nombre.", "Validación",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
+                {
+                    MessageBox.Show("Precio inválido.", "Validación",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPrecio.Focus();
+                    return;
+                }
+                if (!int.TryParse(txtStock.Text, out int stock))
+                {
+                    MessageBox.Show("Stock inválido.", "Validación",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtStock.Focus();
+                    return;
+                }
+
+                Producto p = new Producto
+                {
+                    Id = 0,
+                    Nombre = txtNombre.Text.Trim(),
+                    Precio = precio,
+                    Stock = stock,
+                    Estado = chkEstado.Checked,
+                    Id_Categoria = 1 
+                };
+
+                // AGREGAR:
+                int nuevoId = bll.Insertar(p); // Llama al método Insertar de la DAL
+
+                MessageBox.Show("Producto agregado correctamente. ID: " + nuevoId, "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                RefrescarGrid(); // Llama a CargarProductos(string.Empty) para refrescar la DB
+                LimpiarCampos();
+                DesabilitarBotones();
             }
-            //Crear objeto producto y asignar Id incremental manualmente
-            int nuevoId = listaProductos.Any() ? listaProductos.Max(x => x.Id) + 1 : 1;
-            var p = new Producto
+            catch (Exception ex)
             {
-                Id = nuevoId,
-                Nombre = txtNombre.Text,
-                Descripcion = txtDescripcion.Text,
-                Precio = decimal.Parse(txtPrecio.Text),
-                Stock = int.Parse(txtStock.Text),
-                Estado = chkEstado.Checked
-            };
-            //Agregar a la lista
-            listaProductos.Add(p);
-            RefrescarGrid();//refrescar el datagridview
-            //Limpiar los controles
+                MessageBox.Show("Ocurrió un error:\n" + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             LimpiarCampos();
         }
         //Metodo para limpiar los controles
         private void LimpiarCampos()
         {
             txtNombre.Clear();
-            txtDescripcion.Clear();
             txtPrecio.Clear();
             txtStock.Clear();
             chkEstado.Checked = true;
@@ -150,85 +162,82 @@ namespace ProyectoPOS_1CA_A.CapaPresentacion
             //Obtener el producto seleccionado
             txtId.Text = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
             txtNombre.Text = dgvProductos.CurrentRow.Cells["Nombre"].Value.ToString();
-            txtDescripcion.Text = dgvProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
             txtPrecio.Text = dgvProductos.CurrentRow.Cells["Precio"].Value.ToString();
             txtStock.Text = dgvProductos.CurrentRow.Cells["Stock"].Value.ToString();
-            chkEstado.Checked = (bool)dgvProductos.CurrentRow.Cells["Estado"].Value;
+            chkEstado.Checked = Convert.ToBoolean(dgvProductos.CurrentRow.Cells["Estado"].Value);
+            HabilitarBotones();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Evento para eliminar un producto
             if (!int.TryParse(txtId.Text, out int id))
             {
                 MessageBox.Show("Seleccione un producto válido para eliminar.", "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var prod = listaProductos.FirstOrDefault(x => x.Id == id);
-            if (prod == null)
-            {
-                MessageBox.Show("Producto no encontrado.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+
             if (MessageBox.Show("¿Está seguro de eliminar el producto seleccionado?", "Confirmar eliminación",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                listaProductos.Remove(prod);//con remove elimino el producto de la lista
-                RefrescarGrid();//refrescar el datagridview
-                LimpiarCampos();//limpiar los controles
+                try
+                {
+
+                    bll.Eliminar(id);
+
+                    MessageBox.Show("Producto eliminado correctamente.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    RefrescarGrid();
+                    LimpiarCampos();
+                    DesabilitarBotones();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar eliminar:\n" + ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Evento para editar un producto
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            //valido que el id sea un entero
-            if (!int.TryParse(txtId.Text, out int id))
+            if (!int.TryParse(txtId.Text, out int id)) return;
+
+            Producto p = new Producto
             {
-                MessageBox.Show("Seleccione un producto válido para eliminar.", "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                Id = id, // Importante: Se envía el ID para la actualización
+                Nombre = txtNombre.Text.Trim(),
+                // Debes parsear los textos, ya validaste que son correctos
+                Precio = decimal.Parse(txtPrecio.Text),
+                Stock = int.Parse(txtStock.Text),
+                Estado = chkEstado.Checked,
+                Id_Categoria = 1 // Asumido, si no tienes ComboBox
+            };
+
+            try
+            {
+       
+                bool actualizado = bll.Actualizar(p);
+
+                if (actualizado)
+                {
+                    MessageBox.Show("Producto actualizado correctamente.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefrescarGrid();
+                    LimpiarCampos();
+                    DesabilitarBotones();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el producto para actualizar.", "Advertencia",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            //busco el producto en la lista
-            var prod = listaProductos.FirstOrDefault(x => x.Id == id);
-            //si lo encuentro, actualizo sus propiedades
-            if (prod == null)
+            catch (Exception ex)
             {
-                MessageBox.Show("Producto no encontrado.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Error al actualizar:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //Validaciones identicas a las del boton guardar
-            if (string.IsNullOrWhiteSpace(txtNombre.Text))
-            {
-                MessageBox.Show("El nombre del producto es obligatorio.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtNombre.Focus();
-                return;
-            }//valida que el precio ingresado sea un decimal
-            if (!Validaciones.EsDecimal(txtPrecio.Text))
-            {
-                MessageBox.Show("El precio del producto debe ser un valor numérico.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPrecio.Focus();
-                return;
-            }//valida que el stock ingresado sea un entero
-            if (!Validaciones.EsEntero(txtStock.Text))
-            {
-                MessageBox.Show("el stock del producto debe ser un valor entero.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtStock.Focus();
-                return;
-            }
-            //Actualizar los campos en memoria
-            prod.Nombre = txtNombre.Text.Trim();
-            prod.Descripcion = txtDescripcion.Text.Trim();
-            prod.Precio = decimal.Parse(txtPrecio.Text);
-            prod.Stock = int.Parse(txtStock.Text);
-            prod.Estado = chkEstado.Checked;
-            MessageBox.Show("Producto actualizado correctamente.", "Éxito",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefrescarGrid();//refrescar el datagridview
             LimpiarCampos();//limpiar los controles
             DesabilitarBotones();
